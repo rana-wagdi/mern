@@ -1,0 +1,33 @@
+<DOCTYPE html>
+<html>
+<head>
+<title>Task 1 3 </title>
+</head>
+<body>
+<h1>a simple c program </h1>
+<p>#include &#60;stdio&#62;</p>
+<p>#include &#60;conio&#62;</p>
+<p>int exp(int base , int power) </p>
+<pre>
+{
+       if(power ==0)
+	{
+	return 0 ;
+	else
+	{
+	    power--;
+	    return base*exp(base,power);
+	}
+}
+int main()
+{
+	 int x=2, y=3;
+	 clrscr();
+	 printf("\n %d = ^ %d =%d" ,x,y,exp(x,y));
+	 getch();    return 0 ;
+}
+</pre>
+</body>
+</html>
+
+
