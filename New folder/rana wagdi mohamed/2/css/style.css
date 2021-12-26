@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.assignments_items{
+    margin: 100 auto;
+    overflow: auto;
+    align-items: center;
+}
+.assignments_item{
+    float: left;
+    width: 40%;
+}
+.content_one{
+    background-color: #28d7b0;
+    height: 50vh;
+    padding: 1rem;
+}
+.content_one_content{
+    margin-top: 4rem;
+}
+.content_two{
+    background-color: #96decf;
+    padding: 1rem;
+    height: 50vh;
+}
+.content_two_content{
+    margin-top: 4rem;
+}
+.content_two ul{
+    margin-left: 3rem;
+    margin-bottom: 2rem;
+    
+}

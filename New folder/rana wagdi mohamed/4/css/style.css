@@ -1,0 +1,50 @@
+body{
+    background-color: #56BAEC;
+}
+.form__content{
+    text-align: center;
+
+    background-color: #ffffff;
+    width: 30%;
+    margin: 10rem auto;
+    height: 55vh;
+    border-radius: 1rem;
+}
+.form__content span{
+   margin-right: .8rem;
+   margin-top: 2rem;
+}
+.SI{
+    font-weight: bolder;
+    border-bottom: 3px solid #56BAEC;
+    border-width: 80%;
+}
+.so{
+    opacity: .4;
+}
+.first_Section{
+    padding-top: 2rem !important;
+}
+input::placeholder{
+    text-align: center;
+}
+input{
+    padding: .8rem;
+    background-color: #F6F6F6;
+    width: 80%;
+    border: none;
+    border-radius: .7rem;
+}
+button{
+    padding: .8rem 5rem;
+    background-color: #56BAEC;
+    border: none;
+    border-radius: .5rem;
+    color: #ffffff;
+
+}
+.footer{
+    padding: 2rem 0;
+    background-color: #F6F6F6;
+    border-top: ;
+}
