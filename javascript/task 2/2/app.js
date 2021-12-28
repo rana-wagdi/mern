@@ -1,44 +1,35 @@
 // alert("rana");
 
-// 4- Functions accept 2 variables and return the summation result
 
-
-
-
-
-// while( val1.length<1){
-//     val1 = parseInt(prompt("insert first number"));
-// }
 
 let val1=""
 let val2 ="";
-let  check = true;
+
 function valInput() {
-  
-   
-  
-        do{
 
-            val1 = prompt("enter first number","0");
-            
-   
-            
-    } while (val1 < 1 )
-
-    
-    do {
+    val1 = prompt("enter first number","0");
+     while( (val1<1) ||(isNaN(val1))){
         val1 = prompt("enter first number","0");
-    }while (isNaN(val1)==true)
-   
-    do{
-        val2 = prompt("enter second number","0")
-    }
-    while(val2<1);
-
-    do {
+     }
+  
+     val2 = prompt("enter second number","0");
+     while( (val2<1) ||(isNaN(val2))){
         val2 = prompt("enter second number","0");
-    }while (isNaN(val2)==true)
+     }
+     
+          
+           
+   
+            
     
+
+    
+    // do {
+    //     val1 = prompt("enter first number","0");
+    // }while (isNaN(val1)==true)
+   
+
+
   result =parseInt(val1)+ parseInt(val2);
   alert(result)
 
