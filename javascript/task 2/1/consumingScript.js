@@ -1,0 +1,1 @@
+console.log(printVariables(5,10,20))
