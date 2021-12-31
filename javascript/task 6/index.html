@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .border_img{
+            border: 1px solid black;
+        }
+        .image_contact{
+            position: relative;;
+            width: 100%;
+            float: left;
+        }
+        .image_item{
+           position: absolute;
+           width: 100%;
+        }
+    </style>
+</head>
+<body>
+    
+    <table  style="border:1px solid black; margin-bottom: 3rem;" class="table_content">
+        <tr  style="border:1px solid black;"><td  style="border:1px solid black;"><a href="http://www.iti.gov.eg" > ITI </a> </td><td  style="border:1px solid black;"> Cell 2</td> </tr>
+        <tr><td  style="border:1px solid black;"><a href="http://www.google.com" > google </a> </td><td  style="border:1px solid black;"> Cell 4</td> </tr>
+        <tr><td  style="border:1px solid black;"><a href="next.html"> MyPage </a> </td><td  style="border:1px solid black;"> Cell 6</td> </tr>
+    </table>
+    <table  style="border:1px solid black;" class="table_content">
+        <tr  style="border:1px solid black;"><td  style="border:1px solid black;"><a href="http://www.iti.gov.eg" > ITI </a> </td><td  style="border:1px solid black;"> Cell 2</td> </tr>
+        <tr><td  style="border:1px solid black;"><a href="http://www.google.com"  id="traineeAnchor"> google </a> </td><td  style="border:1px solid black;"> Cell 4</td> </tr>
+        <tr><td  style="border:1px solid black;"><a href="next.html"> MyPage </a> </td><td  style="border:1px solid black;"> Cell 6</td> </tr>
+    </table>
+
+
+    <img src="images/1.jpg" width="250" height="250" />
+    <img src="images/2.jpg"  width="250" height="250" />
+    <img src="images/3.jpg"  width="250" height="250"/>
+    <img src="images/4.jpg" width="250" height="250"/>
+
+
+    <div id="example" name="exampleDiv">
+        <a><p class="a">This is paragraph 1 </p></a>
+        <p id="para2">This is paragraph 2 </p>
+        <p class="bGrey fontBlue">This is paragraph 3  <span> this is span 1</span>  </p>
+        <span> <p id="para4">This is paragraph 4 </p></span>
+    </div>
+
+
+
+    <form  name="regForm" action="Data.aspx">
+        <input type="checkbox" name="hoppy" value="1" checked />Running
+        <input type="checkbox" name="hoppy" value="2" />Swimming
+        <input type="checkbox" name="hoppy" value="3" />Reading<br />
+        <select name="City" class="bPink">
+            <option value="1">Mansoura</option>
+            <option value="2">Cairo</option>
+            <option value="3">Alex</option>
+        </select>
+        <input id="send" type="submit" value="Send" />
+        
+     
+    </form>
+   <form method="get" name="regForm" action="Data.aspx">
+        <label>Name</label> <input type="text" 
+        name="userName" required><br>
+        <p id="demo"></p>
+        <label>Age</label><input type="number" id="age" required><br>
+        <label>grade</label><input type="number" id="grade" required><br>
+        <button type="submit" onclick="myFunction()"
+        value="Submit" id="button_submit">Add student</button>
+   </form>
+ 
+
+
+    <!-- <button id="next">next</button>
+    <div class="image_contact">
+        <div class="image_item">
+    <img src="images/1.jpg" class="fake" id = "slides" width="250" height="250" />
+</div>
+<div class="image_item">
+    <img src="images/2.jpg" class="fake" id = "slides" width="250" height="250" />
+</div>
+<div class="image_item">
+    <img src="images/3.jpg" class="fake" id = "slides" width="250" height="250" />
+</div> -->
+  
+</div>
+<br>
+<br>
+<br>
+    <h1>Timer</h1>
+    <p id="pro"></p>
+    <button id="count">time</button>
+    <!-- <button id="start_button" onclick="countDown()">start</button> -->
+
+
+    <script src="app.js"></script>
+</body>
+</html>

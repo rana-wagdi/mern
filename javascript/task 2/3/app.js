@@ -2,6 +2,7 @@
 
 
 let userName = "";
+let grads=";"
 
 function studentGrads() {
 
@@ -16,16 +17,34 @@ function studentGrads() {
     
    let sum =0;
 
+//    do{
+//     grads= prompt("Enter your Grads").split(",");
 
-   
-    let grads= prompt("Enter your Grads").split(",");
-    for(var i = 0; i < grads.length; i++){
+//     console.table(grads)
+//     for(var i = 0; i < grads.length; i++){
  
 
-        sum += +grads[i];
-        console.log(sum)
+//         sum += +grads[i];
+//         console.log(sum)
+//     }while (isNaN(grads[i])==true)
+//      }  
+//      break;
 
-     }  
+grads= prompt("Enter your Grads").split(",");
+for(var i = 0; i < grads.length; i++){
+   
+    
+    while(isNaN(grads[i])==true){
+        grads= prompt("Enter your Grads").split(",");
+
+    }
+    sum += +grads[i];
+    console.log(sum)
+}
+
+
+
+    
     
     
     
@@ -36,7 +55,9 @@ console.log(avrageGrade)
 
 console.log("average", avrageGrade)
 
-    alert(`Hello${userName}`)
+    alert(`Hello ${userName}`)
+    alert(`Your avreage is ${avrageGrade}`)
+
       
 
 }

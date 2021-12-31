@@ -8,12 +8,12 @@ let val2 ="";
 function valInput() {
 
     val1 = prompt("enter first number","0");
-     while( (val1<1) ||(isNaN(val1))){
+     while( (val1<1) ||(isNaN(val1)==true)){
         val1 = prompt("enter first number","0");
      }
   
      val2 = prompt("enter second number","0");
-     while( (val2<1) ||(isNaN(val2))){
+     while( (val2<1) ||(isNaN(val2)==true)){
         val2 = prompt("enter second number","0");
      }
      
