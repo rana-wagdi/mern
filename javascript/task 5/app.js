@@ -103,14 +103,101 @@ if (grade < 0 || grade > 100)
 }
 
 
+let slideShow = document.getElementById('slideShow')
+let next = document.getElementById('next')
+let previous =document.getElementById('previous')
+
+slideShow.addEventListener('click', changeImg)
+var i = 0;
+
+var images = [];
+
+
+images[0] = 'images/1.jpg';
+images[1] = 'images/2.jpg';
+images[2] = 'images/3.jpg';
+
+
+
+
+
+function changeImg(){
+
+    document.slide.src = images[i];
+
+    if (i < images.length -1){
+        i++;
+    } else {
+        i=0;
+    }
+    setTimeout("changeImg()", 1000)
+}
+
+//////////////next
+next.addEventListener('click', nextImg);
+function nextImg(){
+
+    document.slide.src = images[i];
+
+    if (i < images.length-1 ){
+        i++;
+    } else {
+        i=0;
+    }
+
+    
+}
+previous.addEventListener('click', preImg);
+function preImg(){
+
+    document.slide.src =  images[i];
+ 
+    
+    if (i < (images.length)- 1 ){
+        i++;
+    } else {
+        i=0;
+    }
+    
+}
+
+
+// previous.addEventListener('click', preImg);
+// function preImg(){
+
+//     document.slide.src =  images[i];
+ 
+    
+//     if (i > images[i] - 1 ){
+//         i--;
+//     } else {
+//         i=0;
+//     }
+    
+// }
+// window.onload = changeImg;
+
+// var imgs = document.getElementsByClassName('slides').src;
+// console.log(imgs)
+
+// function changeImg(){
+//     for(var i=0; i <imgs.length; i++ ){
+//         if(imgd[i] < imgs.length-1){
+//             i++
+//         }else {
+//             i=0;
+//         }
+//     }setTimeout("changeImg()", 10000)
+// }
+
 
 // var slideIndex = 0;
 // showSlides();
 
 // function showSlides() {
 //   var i;
-//   var slides = document.getElementsByClassName("image_item");
-//   var dots = document.getElementsByClassName("dot");
+//   var slides = document.getElementsByClassName("fake").src;
+ 
 //   for (i = 0; i < slides.length; i++) {
 //     slides[i].style.display = "none";  
 //   }
@@ -123,10 +210,7 @@ if (grade < 0 || grade > 100)
 // }
 
 // document.querySelector("table.bPink").setAttribute("style","color:red");
-var count = prompt("Enter Time");
 
-
-document.getElementById("pro").innerHTML=`The time is: ${count} Minute`;
 
 
 /*The setInterval() method, offered on the Window and Worker interfaces,
@@ -134,23 +218,26 @@ document.getElementById("pro").innerHTML=`The time is: ${count} Minute`;
   fixed time delay between each call.*/
 
 
+//   var count = prompt("Enter Time");
 
 
-  let time = count *60;
+// document.getElementById("pro").innerHTML=`The time is: ${count} Minute`;
 
-  let countTime = setInterval(countDown, 1000);
+//   let time = count *60;
 
-let start = document.getElementById('start_button')
+//   let countTime = setInterval(countDown, 1000);
 
-function countDown(){
-  const minutes = Math.floor(time/60);
-  let seconds = time % 60;
-  document.getElementById('count').innerHTML=` ${minutes}: ${seconds}`;
+// let start = document.getElementById('start_button')
 
-time--;
-if (time === 0){
-  clearInterval(countTime);
+// function countDown(){
+//   const minutes = Math.floor(time/60);
+//   let seconds = time % 60;
+//   document.getElementById('count').innerHTML=` ${minutes}: ${seconds}`;
+
+// time--;
+// if (time === 0){
+//   clearInterval(countTime);
   
-  alert("You're out of time!");
-}
-}
+//   alert("You're out of time!");
+// }
+// }
