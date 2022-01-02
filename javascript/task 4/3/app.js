@@ -1,12 +1,19 @@
 // alert("rana");
-
+// setInterval(function () {element.innerHTML += "Hello"}, 1000);
+window.setInterval(function () {document.title +todayTime()}, 1000);
 
 function todayTime(){
     let day = new Date;
     console.log(day)
-    day.toLocaleString();
+    
     console.log(day)
-document.title = day
+
+    day.toLocaleString();
+    document.title =day;
+    day.toLocaleString();
+      
+    return day;
+
 }
 
-todayTime()
+
