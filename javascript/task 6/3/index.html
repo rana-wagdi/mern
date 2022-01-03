@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flip {
+            transform: rotateY(180deg);
+        }
+
+         #egg{
+      
+            position: absolute;
+         }
+    </style>
+
+</head>
+
+<body>
+    <div style="width: 100%; overflow: hidden;">
+        <img src="images/basket.png" id="basket" width="100" height="100"
+            style="margin-top: 35rem; overflow: hidden;padding-left: 7rem;position: absolute;">
+    </div>
+    <div>
+        <img src="images/1182.png" id="egg" width="80" height="80">
+    </div><div>
+        <img src="images/Uovo_sorridente.png" id="egg" width="80" height="80" style="display: none;">
+    </div>
+
+    <script>
+        var dog = document.getElementById("dogPic");
+        var basket = document.getElementById('basket')
+        var moving = false;
+
+        basket.addEventListener("mousedown", initialClick, false);
+
+
+        function move(e) {
+
+            var newX = e.clientX - 250;
+            var newY = e.clientY - 0;
+
+            basket.style.left = newX + "px";
+            basket.style.down = 0 + "px";
+
+
+        }
+
+        function initialClick(e) {
+
+
+            window.document.addEventListener("mousemove", move);
+
+        }
+
+        let birdObject = document.images[1];
+        let bottom = 0;
+        function moveRight() {
+            let timerID = setInterval(() => {
+                bottom += 1;
+                if (bottom < window.innerHeight - birdObject.height){
+                    birdObject.style.top = bottom + "px";
+                   
+            }   else if (bottom = window.innerHeight - birdObject.height){
+                    birdObject.style.top = bottom + "px";
+                    birdObject.style.display = "block";
+
+                   birdObject=document.images[2]
+            }
+                else {
+                   
+                    
+                    birdObject= document.images[0];
+                }
+            }, 1)
+        }
+        moveRight();
+    </script>
+
+
+</body>
+
+</html>
