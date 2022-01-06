@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 6 1</title>
+    <style>
+        body {
+            margin: 70px 300px;
+            font-family: Andalus;
+            font-size:x-large;
+            font-weight:bold;
+			background-color:lightGrey;
+            border: 8px solid black;
+            width: 35%;
+            height: auto;
+        }
+        [type=text],[type=button]
+        {
+            font-family:'Century Gothic';
+            font-size:large;
+        }
+
+        table {
+            width: 400px;
+        
+        }
+        span{ color:red;display: none}
+        .SD {
+            background-color: lightpink;
+        }
+
+        .OS {
+            background-color: lightyellow;
+        }
+
+        .EL {
+            background-color: lightskyblue;
+        }
+    </style>
+
+         
+    
+</head>
+<body>
+ 
+    <form>
+        <table>
+            <tr>
+                <td colspan="2">
+                    Department:
+                    <input type="radio" name="Department" value="SD" checked="checked" />SD
+                    <input type="radio" name="Department" value="OS" />OS
+                    <input type="radio" name="Department" value="EL" />EL
+                </td>
+            </tr>
+            <tr><td>StudentName<input type="text" name="studentName" value="Eman" required/></td><td><span id="nameError">Required</span></td></tr>
+            <tr><td>StudentGrade<input type="text" name="studentGrade" value="50" /></td><td><span id="gardeError">should be number</span></td></tr>
+            
+			<tr><td><input type="button"  value="Add" /></td></tr>
+            <tr>
+                <td colspan="2">
+                    Sort:
+                    <select id="sortSelection">
+                        <option value="all">All</option>
+                        <option value="name" >Name</option>
+                        <option value="fail">Grade</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    Filter:
+                    <select id="filterSelection">
+                        <option value="all">All</option>
+                        <option value="success">Success</option>
+                        <option value="fail">Fail`</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        </form>
+
+        <div id="studentsTableView"></div>
+           
+             
+   
+    <script src="app.js"></script>
+</body>
+</html>
