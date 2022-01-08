@@ -68,7 +68,6 @@ class Circle extends Shape{
 }
 
 
-//let object=new Shape();//we create an object so the error appears "can't create object from this class"
 
 let rectobject=new Rectangle("red",20,10,70,10);
 rectobject.draw();//this will draw rectangle;
