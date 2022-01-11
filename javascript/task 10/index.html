@@ -6,11 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task 10</title>
 </head>
+<style>
+    table,
+    th,
+    td {
+        border: 1px solid gray;
+
+    }
+    table{
+        width: 100%;
+    }
+    .info{
+        background-color: pink;
+    }
+</style>
 <body>
     
-    <button type="button" onclick="loadDoc()">Get my CD collection</button>
+    <!-- <button type="button" onclick="loadDoc()">Get my CD collection</button> -->
     <br><br>
-    <table id="demo"></table>
+    <table id="demo">
+        <th>Title</th>
+        <th>Artist</th>
+        <th>Country</th>
+        <th>Company</th>
+        <th>Price</th>
+        <th>Year</th>
+    </table>
     <script src="app.js"></script>
 </body>
 </html>

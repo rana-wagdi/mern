@@ -1,0 +1,74 @@
+<html>
+<head>
+
+
+<style> 
+ 
+    div { background:#de9a44; margin:3px; width:200px; 
+        height:200px; float:left; }
+  
+
+  
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+ 
+
+ 
+<br/>
+<br/>
+<br/>
+<input type="button" id="leftClick" value="<" />
+<input type="button" id="rightClick" value=">" />
+<br/>
+<br/>
+<br/>
+<input type="button" id="slidUp" value="SlideUp"  />
+<input type="button" id="slidDown" value="Slide Down"/>
+<input type="button" id="toggle" value="Slide Toggle" />
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+  <div style="background-color:blue;"></div>
+  
+  <br/>
+ 
+  <script>
+    $(document).ready(function(){
+  $("#slidUp").click(function(){
+    $('div').slideUp();
+  })
+  $("#slidDown").click(function(){
+    $('div').slideDown();
+  })
+  $("#toggle").click(function(){
+  
+    $('div').slideToggle();
+  
+  })
+
+  $("#rightClick").click(function(){
+  
+  $('div').animate({
+    'marginLeft' : "+=50px"
+});
+
+})
+$("#leftClick").click(function(){
+$('div').animate({
+    'marginLeft' : "-=50px"
+});
+
+
+    })
+    })
+  </script>
+
+</body>
+
+
+</html>

@@ -10,85 +10,50 @@ function loadDoc() {
   }
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
-      // tableTag.textContent=this.response;//text
-      // parser = new DOMParser();
-      // xmlData = parser.parseFromString(this.response, "text/xml");
-      // let studentsTags = xmlData.querySelectorAll("cd");
-        
-      // for (let i = 0; i < studentsTags.length; i++) {
-      //   tableTag.textContent=studentsTags[i]
+
   
   let    parser=new DOMParser();
    let   xml= parser.parseFromString(this.response,"text/xml");
       // tableTag.textContent=this.response;//text
 buildData(xml)
 console.log(xml)
-      // let studentsTags=xmlData.querySelectorAll("cd");
-      // for(let i=0;i<studentsTags.length;i++)
-      // {
-      //       // console.log(   studentsTags[i].getAttribute("id"));
-      //       tableTag.textContent=  studentsTags[i].querySelector("title")
-      //       tableTag.textContent =  studentsTags[i].querySelector("artist");
-      // }
-      //   functionData(this)
-      //   console.log(studentsTags[i].getAttribute("id"));
-      //   console.log(studentsTags[i].querySelectorAll("title").textContent)
-      //   console.log(studentsTags[i].querySelectorAll("artist").textContent)
-      // }
 
-      // var xmlDoc = this.response;
-      // console.log(xmlDoc)
-      // //  tableTag.textContent=xmlDoc;//text
-      // var x = xmlDoc.querySelectorAll("CD");
-      // tableTag.textContent = x;
     }
   }
   };
+  loadDoc()
   function buildData(x){
     // let tableTag = document.getElementById('demo')
     let names = x.getElementsByTagName('CD')
 
     for(let i =0; i< names.length;i++){
-      let namess= names[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue
+      let title= names[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue;
+      let artist= names[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue;
+      let country= names[i].getElementsByTagName("COUNTRY")[0].childNodes[0].nodeValue;
+      let company= names[i].getElementsByTagName("COMPANY")[0].childNodes[0].nodeValue;
+      let price= names[i].getElementsByTagName("PRICE")[0].childNodes[0].nodeValue;
+
+      let year= names[i].getElementsByTagName("YEAR")[0].childNodes[0].nodeValue;
+    //   if(price>10){
+    // price.style.color="red"
+    //     }
       let tr = document.createElement('tr');
     //  let namess= names[i].firstChild.nodeValue;
-      td.textContent = namess;
-      tableTag.append(td)
+      tr.innerHTML =`<td>${title}</td><td>${artist}</td><td>${country}</td><td>${company}</td><td class="info">${price}</td><td>${year}</td>`;
+      tableTag.append(tr)
     }
+    var valuee = document.getElementsByClassName("info");
+
+    console.log(valuee)
+
+      for (var o = 0; o < valuee.length; o++) {
+        let item = valuee[o].innerText;
+       if(item>10){
+          valuee[o].style.backgroundColor="grey"
+       }
+
+   
+      }
+
   }
 
-
-  // function functionData(xml) {
-  //   var i;
-  //     // tableTag.textContent=this.response;//text
-
-  //   var xmlDoc = xml.response;
-  //   tableTag.textContent=xmlDoc;
-
-    // var x = xmlDoc.getElementsByTagName("cd")[0]
-
-
-    // for (i = 0; i <x.length; i++) { 
-    //   table += "<tr><td>" +
-    //   x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
-    //   "</td><td>" +
-    //   x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
-    //   "</td></tr>";
-    // }
-    // document.getElementById("demo").innerHTML = table;
-  
-
-//   function myFunction(xml) {
-//     var i;
-//     var xmlDoc = xml.responseXML;
-//     var table="<tr><th>Artist</th><th>Title</th></tr>";
-//     var x = xmlDoc.querySelector("cd");
-//     for (i = 0; i <x.length; i++) {
-//       table += "<tr><td>" +
-//       x[i].getElementsByTagName("")[0].childNodes[0].nodeValue +
-//       "</td><td>" +
-//       x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
-//       "</td></tr>";
-//     }
-//     document.getElementById("demo").innerHTML = table;
-//   }
