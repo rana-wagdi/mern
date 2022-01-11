@@ -2,9 +2,12 @@ export default class Car{
     constructor(model, year){
         this.model =model
         this.year = year
+      
     }
-}
+    
 
+}
+// const carsModel = new Car("pmw", 1255);
 
 export function toString(car){
 
