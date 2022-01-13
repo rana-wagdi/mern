@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+</head>
+<style>
+    input{
+        margin: 2rem 0 2rem;
+    }
+</style>
+<body>
+    <form onsubmit="logIn()">
+        <input type="type" name="email" id="email" placeholder="Enter Your UserName"><br>
+        <input type="password" name="" id="password" placeholder="Enter Your Password"><br>
+        <button type="submit" >Login</button>
+    </form>
+
+    <script>
+        function logIn(e){
+            event.preventDefault();
+            // console.log('working')
+            var email = document.getElementById("email").value;
+            var pass =document.getElementById("password").value; 
+
+            var user = {
+                email: email,
+                password:pass,
+            }
+            var json = JSON.stringify(user);
+            localStorage.setItem(user, json)
+           
+            console.log('user added')
+
+            if(user == null){
+                alert("wrong")
+            }
+            localStorage.setItem('name',user.email);
+                window.location.href="./home.html";
+            
+        }
+
+        // function login(){
+        //     var email = document.getElementById("email").value;
+        //     var pass =document.getElementById("pass").value;
+
+        //     var email1 = localStorage.getItem("email1");
+        //     var pass1 = localStorage.getItem("pass1");
+
+        //     if(email ==email1 && pass==pass1){
+        //         window.location.href="home.html";
+        //     }else {
+        //         alert("email and pass is in correct")
+        //     }
+        // }
+    </script>
+</body>
+</html>

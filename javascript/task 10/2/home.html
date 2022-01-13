@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h1> Welcome</h1> -->
+    <h1>Welcome <script>document.write(localStorage.getItem('name'));</script></h1>
+
+    <nav class="nav border-2 bg-info">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="students-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#students"
+              type="button"
+              role="tab"
+              aria-controls="students"
+              aria-selected="true"
+            >
+              Students
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="AddStuden-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#AddStuden"
+              type="button"
+              role="tab"
+              aria-controls="AddStuden"
+              aria-selected="false"
+            >
+              Add Studen
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="departments-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#departments"
+              type="button"
+              role="tab"
+              aria-controls="departments"
+              aria-selected="false"
+            >
+              Departments
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="addDepartment-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#addDepartment"
+              type="button"
+              role="tab"
+              aria-controls="addDepartment"
+              aria-selected="false"
+            >
+              Add Department
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="EditDepartment-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#EditDepartment"
+              type="button"
+              role="tab"
+              aria-controls="EditDepartment"
+              aria-selected="false"
+            >
+              Edit Department
+            </button>
+          </li>
+        </ul>
+      </nav>
+      <!-- end tabs nav -->
+
+      <!-- start pages -->
+      <div class="tab-content bg-light" id="myTabContent">
+        <div
+          class="tab-pane fade show active"
+          id="students"
+          role="tabpanel"
+          aria-labelledby="students-tab"
+        >
+          <table class="table students-table">
+            <thead>
+              <tr>
+                <th scope="col">name</th>
+                <th scope="col">department</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- students records -->
+            </tbody>
+          </table>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="AddStuden"
+          role="tabpanel"
+          aria-labelledby="AddStuden-tab"
+        >
+          <!--start AddStuden -->
+          <form class="student-form p-4">
+            <div class="mb-3">
+              <label for="name" class="form-label">username</label>
+              <input
+                type="text"
+                class="form-control"
+                id="username-input"
+                aria-describedby="textHelp"
+                minlength="3"
+                placeholder="enter user name"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="department" class="form-label">Department</label>
+              <select
+                class="form-select"
+                id="department"
+                aria-label="Default select example"
+                required
+              ></select>
+            </div>
+
+            <div class="d-flex justify-content-center">
+              <button
+                type="submit"
+                id="add-student"
+                class="btn btn-lg btn-success"
+              >
+                Add
+              </button>
+            </div>
+          </form>
+          <!--end AddStuden -->
+        </div>
+
+        <div
+          class="tab-pane fade"
+          id="departments"
+          role="tabpanel"
+          aria-labelledby="departments-tab"
+        >
+          <table class="table departments-table">
+            <thead>
+              <tr>
+                <th scope="col">name</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- departments records -->
+            </tbody>
+          </table>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="addDepartment"
+          role="tabpanel"
+          aria-labelledby="addDepartment-tab"
+        >
+          <!-- start addDepartment -->
+          <form class="add-department-form p-4">
+            <div class="mb-3">
+              <label for="department-id" class="form-label"
+                >department id</label
+              >
+              <input
+                type="number"
+                class="form-control"
+                id="department-id-input"
+                aria-describedby="textHelp"
+                minlength="1"
+                placeholder="enter department id"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="department-name" class="form-label"
+                >department name</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="department-name-input"
+                aria-describedby="textHelp"
+                minlength="3"
+                placeholder="enter department name"
+                required
+              />
+            </div>
+
+            <div class="d-flex justify-content-center">
+              <button
+                type="submit"
+                id="add-student"
+                class="btn btn-lg btn-success"
+              >
+                Add
+              </button>
+            </div>
+          </form>
+          <!-- end addDepartment -->
+        </div>
+        <div
+          class="tab-pane fade"
+          id="EditDepartment"
+          role="tabpanel"
+          aria-labelledby="EditDepartment-tab"
+        >
+          <!-- start EditDepartment -->
+          <form class="edit-department-form p-4">
+            <div class="mb-3">
+              <label for="department" class="form-label">Department</label>
+              <select
+                class="form-select"
+                id="department"
+                aria-label="Default select example"
+                required
+              >
+                <!-- options -->
+              </select>
+            </div>
+            <div class="d-flex justify-content-center mb-3">
+              <span id="delete-department" class="btn btn-lg btn-danger">
+                Delete
+              </span>
+            </div>
+
+            <div class="mb-3">
+              <label for="department-name" class="form-label"
+                >department name</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="department-name-input"
+                aria-describedby="textHelp"
+                minlength="3"
+                placeholder="enter department name"
+                required
+              />
+            </div>
+
+            <div class="d-flex justify-content-center">
+              <button
+                type="submit"
+                id="add-student"
+                class="btn btn-lg btn-success"
+              >
+                Update
+              </button>
+            </div>
+          </form>
+          <!-- end EditDepartment -->
+        </div>
+      </div>
+      <!-- end pages -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type = "text/javascript" 
+    src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+ </script>
+ <script type = "text/javascript" 
+ src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js">
+</script>
+    <title>Document</title>
+
+    <style>
+        .squr{
+            height: 150px;
+          width: 250px;
+          background-color: gray;
+          margin: 0 2rem ;
+          display: none;
+          margin-bottom: 2rem;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="squr"></div>
+    <input type="button" id="fadeIn" value="FadeIn">
+    <input type="button" id="fadeout" value="FadeOut">
+    <input type="button" id="fadeto" value="fade to 30%">
+    <input type="button" id="fadeo" value="fade to 100%">
+    <input type="button" id="pulsat" value="fade to 100%">
+
+
+    <script>
+        $("#fadeIn").click(function(){
+    $('div').fadeIn(100);
+  })
+  $("#fadeout").click(function(){
+    $('div').fadeOut(100);
+  })
+  $("#fadeto").click(function(){
+    $('div').fadeTo("slow",0.3);
+  })
+  $("#fadeo").click(function(){
+    $('div').fadeTo("slow",1);
+  })
+  $("#pulsat").click(function(){
+    $('div').effect( "pulsate", {times:5}, 3000 );
+  })
+    </script>
+</body>
+</html>
