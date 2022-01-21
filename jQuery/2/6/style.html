@@ -1,0 +1,39 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="jQuery/jquery-ui.min.css" />
+  <title>ColorSlider</title>
+ <style>
+   #red{
+     width: 150px;
+     height:150px;
+     background-color: aqua;
+   }
+ </style>
+  <script src="jquery-3.6.0.js"></script>
+  <script src="jQuery/jquery-ui.min.js"></script>
+</head>
+<body class="ui-widget-content" style="border:0;">
+
+
+  <div id="red"></div>
+
+
+
+  <script>
+$.fn.extend({
+  styleAnimate(){
+
+    $(this)
+    .css("position", "absolute")
+    .animate({top:"250px"},1000)
+    .animate({left:"250px"},1000)
+    .animate({top:"0px"},1000)
+    .animate({left:"0px"},1000)
+  }
+})
+
+  </script>
+</body>
+
+</html>

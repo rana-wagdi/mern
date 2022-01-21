@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <script>
+        $( function() {
+          $( "#menu" ).menu();
+        } );
+        </script>
+        <style>
+        .ui-menu { width: 150px; }
+        </style>
+      </head>
+      <body>
+       
+      <ul id="menu" style="background-color: #FFE4C4;">
+        <li class="ui-state-disabled"><div>MeanStack</div></li>
+        <li><div>Javascript</div>
+            <ul style="background-color: #FF7F50;">
+              <li class="ui-state-disabled" ><div>Home</div></li>
+              <li><div>ES5</div></li>
+              <li><div>ES6</div></li>
+            </ul>
+          </li>
+        <li><div>NodeJs</div></li>
+        <li><div>Mongodb</div></li>
+      
+        <li><div>Ajax</div></li>
+        <li><div>Movies</div></li>
+        <li><div>API</div>
+          <ul  style="background-color: #FF7F50;">
+            <li ><div>Web Services</div>
+              <ul  style="background-color: #FF7F50;">
+                <li><div>WCF</div></li>
+                <li><div>modern API</div></li>
+              </ul>
+            </li>
+           
+    
+      </ul>
+       
+       
+</body>
+</html>

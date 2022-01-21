@@ -1,0 +1,133 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="jQuery/jquery-ui.min.css" />
+  <title>ColorSlider</title>
+  <style>
+    #red,
+    #green,
+    #blue {
+      float: left;
+      clear: left;
+      width: 300px;
+      margin: 15px;
+    }
+
+    #swatch {
+      width: 120px;
+      height: 100px;
+      margin-top: 18px;
+      margin-left: 350px;
+      background-image: none;
+    }
+
+    #red .ui-slider-range {
+      background: #ef2929;
+    }
+
+    #red .ui-slider-handle {
+      border-color: #ef2929;
+    }
+
+    #green .ui-slider-range {
+      background: #8ae234;
+    }
+
+    #green .ui-slider-handle {
+      border-color: #8ae234;
+    }
+
+    #blue .ui-slider-range {
+      background: #729fcf;
+    }
+
+    #blue .ui-slider-handle {
+      border-color: #729fcf;
+    }
+    
+  </style>
+  <script src="jquery-3.6.0.js"></script>
+  <script src="jQuery/jquery-ui.min.js"></script>
+  <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script> -->
+  <!-- <script src="rgbHex.min.js"></script> -->
+  <script>
+    $(function () {
+      function hexFromRGB(r, g, b) {
+        var hex = [
+          r.toString(16),
+          g.toString(16),
+          b.toString(16)
+        ];
+        // let bb = '#' +hex.byte2Hex(r) + hex.byte2Hex(g) + hex.byte2Hex(b);
+        // $.each( hex, function( nr, val ) {
+        //   if ( val.length === 1 ) {
+        //     hex[ nr ] = "0" + val;
+        //   }
+        // });
+
+        return hex.join("");
+
+      }
+      function refreshSwatch() {
+        var red = $("#red").slider("value"),
+          green = $("#green").slider("value"),
+          blue = $("#blue").slider("value"),
+          hex = hexFromRGB(red, green, blue);
+
+        $("#swatch").css("background-color", "#" + hex);
+
+  
+
+
+
+        var boxcolor = $('#swatch').css("background-color");
+        $("#swatch").html(" <span style='color:" +
+          boxcolor + "'>" + boxcolor + "</span>.");
+        var boxcolor = $('#swatch').css("background-color");
+        var rgb = $('#swatch').css("background-color");
+       let rana ='#' + rgb.substr(4, rgb.indexOf(')') - 4).split(',').map((color) => parseInt(color).toString(16).padStart(2, '0')).join('');
+       $("#swatch").html(" <p>" +rana + "</p>");
+        console.log(rana)
+        $("#swatch").append(" <span>" + boxcolor + "</span>");
+        // const rgb2hex = (boxcolor) => `#${boxcolor.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/).slice(1).map(n => parseInt(n, 10).toString(16).padStart(2, '0')).join('')}`
+      
+       
+      }
+
+
+
+      $("#red, #green, #blue").slider({
+        orientation: "horizontal",
+        range: "min",
+        max: 255,
+        value: 127,
+        slide: refreshSwatch,
+        change: refreshSwatch
+      });
+      $("#red").slider("value", 255);
+      $("#green").slider("value", 140);
+      $("#blue").slider("value", 60);
+    });
+
+  </script>
+</head>
+
+<body class="ui-widget-content" style="border:0;">
+
+  <span id="result"></span>
+  <span id="results"></span>
+
+  <div id="red"></div>
+  <div id="green"></div>
+  <div id="blue"></div>
+  
+  <div id="swatch" class="ui-widget-content ui-corner-all"></div>
+
+
+  <script>
+
+
+  </script>
+</body>
+
+</html>

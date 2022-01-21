@@ -1,0 +1,111 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="jQuery/jquery-ui.min.css" />
+  <script src="jquery-3.6.0.js"></script>
+  <script src="jQuery/jquery-ui.min.js"></script>
+
+</head>
+<style>
+ 	.liElm
+		{
+			color:blue;
+			background-color:lightgray;
+			cursor: pointer;
+		}
+</style>
+
+<body>
+
+  
+  <table style='margin: 50px;margin-left: 100px;width:50%;    '>
+    <tr><td style="border:black 3px solid;width:50%">
+    <div >
+      <ul  id="lstBox1">
+        <li> JS </li>
+        <li> Jquery </li>
+        <li> Angular </li>
+        <li > HTML </li>
+      </ul>
+    
+    </div>
+    </td>
+    <td style="border:black 3px solid;width:50%">
+    <div >
+      <ul id="lstBox2">
+        <li> CSS </li>
+      </ul>
+    
+    </div>
+    </td>
+    </tr>
+    <tr ><td style="text-align: center" colspan=2><br/> <input  type="button" id="btnLeft" value="<"/><input type="button" id="btnRight" value=">"/></td></tr>
+    <tr><td> <br/>Add Course </td><td><br/><input id="userInputID" type="text"/><input type="button" id="getValBtnID" value="add"/></td></tr>
+    
+    </table>
+
+  <script>
+
+
+
+(function () {
+  $( "li" ).on( "click", function() {
+$( this ).addClass( "selected" ).css( "background-color", "blue" );
+
+});
+  $("#getValBtnID").click(function () {
+                var inputString = $("#userInputID").val();
+                $("#lstBox1").append(`<li>${inputString}</li>`);
+                $( "li" ).on( "click", function() {
+$( this ).addClass( "selected" ).css( "background-color", "blue" );
+
+});
+            });
+  $("#btnRight").click(function (e) {
+    var selectedOpts = $("#lstBox1 .selected");
+    if (selectedOpts.length == 0) {
+      alert("Nothing to move.");
+      e.preventDefault();
+    }
+
+    $("#lstBox2").append($(selectedOpts).clone());
+    $(selectedOpts).remove();
+    $( "li").removeClass("selected").css( "background-color", "white" );  
+    e.preventDefault();
+  });
+
+
+
+
+  $("#btnLeft").click(function (e) {
+    var selectedOpts = $("#lstBox2 .selected ");
+    if (selectedOpts.length == 0) {
+      alert("Nothing to move.");
+      e.preventDefault();
+    }
+
+    $("#lstBox1").append($(selectedOpts).clone());
+    $( "li").removeClass("selected").css( "background-color", "white" ); 
+    $(selectedOpts).remove();
+    e.preventDefault();
+  });
+
+
+})(jQuery);
+
+
+
+
+
+
+
+
+// var words = $( "" ).first().text().split( /\s+/ );
+// var text = words.join( "</span> <span>" );
+// $( "div" ).first().html( "<span>" + text + "</span>" );
+
+  </script>
+
+</body>
+
+</html>
