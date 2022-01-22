@@ -1,0 +1,83 @@
+.content{
+    margin:1rem 7rem ;
+    border: 2px solid black;
+    border-radius: 25px;
+    background-image: linear-gradient(#FFB57B,white,#FFB57B);
+   
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 20% 70%;
+    grid-template-rows: 1;
+    column-gap: 4rem;
+    text-align: center;
+    margin: 2rem auto;
+    height: auto;
+}
+.vedio_content{
+    border: 2px solid black;
+    border-radius: 25px;
+    margin-left: 2rem;
+    /* margin-bottom: 2rem; */
+    background-image: linear-gradient(#FFE4AF,white,#FFE4AF);
+
+}
+
+p{
+    margin: .5rem auto;
+    /* margin-top: 1rem; */
+    padding: .6rem 2rem;
+    width: 35%;
+    text-align: center;
+    border: 2px solid blue;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 2s;
+}
+.button_video{
+    background-color: #ffffff;
+    margin: 1rem;
+}
+.vedio_item{
+    border: 2px solid black;
+    background-image: linear-gradient(#FFE4AF,white,#FFE4AF);
+
+    border-radius: 25px;
+}
+video{
+    width: 80%;
+    /* height: 80%; */
+    margin: 2rem auto;
+    border-radius: 4rem;
+    transition: all 2s ;
+
+}
+video:hover{
+    /* transform: skewX(15deg) ; */
+    /* transform: scaleY(1.3); */
+    width: 100%;
+    /* height: 100%; */
+    /* height: 79vh; */
+    /* height: 90%; */
+    margin: 0rem auto;
+    /* height: 80%; */
+    /* height: 100%; */
+    /* position: absolute; */
+    transition: all 2s ;
+}
+.button_video:hover{
+    background-color: coral;
+}
+/* button{
+    background-color: coral;
+} */
+p:hover{
+    transform: rotate(360deg);
+    background-color: cornsilk;
+    transition: all 2s;
+}
+.active{
+    background-color: blue;
+    transition: all 2s;
+}
