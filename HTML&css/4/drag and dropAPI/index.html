@@ -1,12 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
     <title>drag and drop</title>
 </head>
+
 <body>
-    <
+    <div class="content">
+        <div class="content_items">
+            <div class="img-drag">
+                <img id="drag1" draggable="true" ondragstart="drag(event)" src="images/1.png">
+                <img id="drag2" draggable="true" ondragstart="drag(event)" src="images/2.png">
+                <img id="drag3" draggable="true" ondragstart="drag(event)" src="images/3.jpg">
+                <img id="drag4" draggable="true" ondragstart="drag(event)" src="images/4.jpg">
+                <img id="drag5" draggable="true" ondragstart="drag(event)" src="images/1.png">
+                <img id="drag6" draggable="true" ondragstart="drag(event)" src="images/2.png">
+                <img id="drag7" draggable="true" ondragstart="drag(event)" src="images/3.jpg">
+            </div>
+            <div class="content_drop" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+            </div>
+        </div>
+    </div>
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+           ev.dataTransfer.setData("text", ev.target.id);
+           
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+        var count = document.querySelector('.img-drag').childElementCount;
+        console.log(count)
+// for(var i=0 ; i<=images.length;i++){
+//     console.log()
+//     if(i<1)
+//   {
+//     alert("empty");
+//   }
+
+// }
+
+if(count==1){
+    alert("empty")
+}
+    </script>
 </body>
+
 </html>

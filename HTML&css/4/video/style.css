@@ -24,11 +24,11 @@
 
 }
 
-p{
+p,summary{
     margin: .5rem auto;
     /* margin-top: 1rem; */
     padding: .6rem 2rem;
-    width: 35%;
+    width: 60%;
     text-align: center;
     border: 2px solid blue;
     border-radius: 15px;

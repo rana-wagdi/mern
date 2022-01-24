@@ -26,6 +26,23 @@
                     <p>Video 8</p>
                     <p>Video 9</p>
                     <p>Video 10</p>
+                    <details>
+                        <summary>SeekBar</summary>
+                        <input
+                          type="range"
+                          min="0"
+                          max="100"
+                          step="any"
+                          value="0"
+                          onchange="changeseekbarfun(event)"
+                        />
+                      </details>
+                      <details>
+                        <summary>PlayBackRate</summary>
+                       
+                        <input type="button" value="-" onclick="decreaseplaybackRate()" />
+                        <input type="button" value="+" onclick="increaseplaybackRate()" />
+                      </details>
                 </div>
             </div>
             <div class="vedio_item">
@@ -55,6 +72,8 @@
         document.querySelector('.source_one').addEventListener('click', function() {
             console.log("clicked")
    document.querySelector('video').src="media/1.mp4"
+   video.muted = true;
+        video.play()
 
   });
   document.querySelector('.ww').addEventListener('click', function() {
@@ -83,6 +102,17 @@
         video.play()
 
   });
+
+  function changeseekbarfun(e) {
+    video.currentTime = (e.target.value * video.duration) / 100;
+      }
+      function increaseplaybackRate() {
+        video.playbackRate++;
+      }
+      function decreaseplaybackRate() {
+        video.playbackRate--;
+        // check
+      }
 //   $("#example_video_1 source").attr("src", "example_video_2.mp4");
     //  document.getElementById('vid').play();
     </script>
