@@ -1,0 +1,11 @@
+/* line 1, ../../sass/pages/home.scss */
+.content {
+  margin: 0rem 4rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+/* line 5, ../../sass/pages/home.scss */
+.content h1 {
+  font-size: 4rem;
+  margin: 5rem auto 2rem;
+}

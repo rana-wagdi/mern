@@ -1,0 +1,100 @@
+/*
+Error: Undefined variable: "$black".
+        on line 24 of D:/my project/mern/pre Css/task 2/sass/pages/home.scss
+
+19:         .img1{
+20:             width: 120px;
+21:            height: 120px;
+22:            margin: 3rem 3rem;
+23:            padding: 1rem;
+24:            border: 3px solid $black;
+25:            
+26:         }
+27:        p{
+28:             width: 90%;
+29:         }
+
+Backtrace:
+D:/my project/mern/pre Css/task 2/sass/pages/home.scss:24
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/script/tree/variable.rb:49:in `_perform'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/script/tree/node.rb:50:in `perform'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/script/tree/list_literal.rb:63:in `_perform'
+org/jruby/RubyArray.java:2412:in `map'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/script/tree/list_literal.rb:62:in `_perform'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/script/tree/node.rb:50:in `perform'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:394:in `visit_prop'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `visit_rule'
+org/jruby/RubyArray.java:2412:in `map'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `visit_rule'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:428:in `visit_rule'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `visit_rule'
+org/jruby/RubyArray.java:2412:in `map'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `visit_rule'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:428:in `visit_rule'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `visit_rule'
+org/jruby/RubyArray.java:2412:in `map'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:430:in `visit_rule'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:428:in `visit_rule'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/stack.rb:115:in `with_frame'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/stack.rb:79:in `with_base'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:158:in `visit'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+org/jruby/RubyArray.java:2412:in `map'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:167:in `visit_children'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/base.rb:36:in `visit'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:157:in `visit'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/visitors/perform.rb:8:in `visit'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/root_node.rb:36:in `css_tree'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/tree/root_node.rb:20:in `render'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/engine.rb:268:in `render'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:17:in `render'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:29:in `with_import_scope'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:16:in `render'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+org/jruby/RubyMethod.java:128:in `call'
+file:/D:/Download/compass.app.windows.1.29/compass.app/compass-app.jar!/hook/compass_patch.rb:108:in `update_stylesheet'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/plugin/compiler.rb:215:in `update_stylesheets'
+org/jruby/RubyArray.java:1613:in `each'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/plugin/compiler.rb:470:in `on_file_changed'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/compass_1.0/sass-3.4.13/lib/sass/plugin/compiler.rb:328:in `watch'
+org/jruby/RubyProc.java:271:in `call'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/jruby/listen-1.3.1-patched/lib/listen/listener.rb:252:in `on_change'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/jruby/listen-1.3.1-patched/lib/listen/listener.rb:290:in `initialize_adapter'
+org/jruby/RubyProc.java:271:in `call'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/jruby/listen-1.3.1-patched/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
+D:/Download/compass.app.windows.1.29/compass.app/lib/ruby/jruby/listen-1.3.1-patched/lib/listen/adapter.rb:297:in `start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$black\".\A         on line 24 of D:/my project/mern/pre Css/task 2/sass/pages/home.scss\A \A 19:         .img1{\A 20:             width: 120px;\A 21:            height: 120px;\A 22:            margin: 3rem 3rem;\A 23:            padding: 1rem;\A 24:            border: 3px solid $black;\A 25:            \A 26:         }\A 27:        p{\A 28:             width: 90%;\A 29:         }"; }

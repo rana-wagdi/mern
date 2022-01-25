@@ -1,0 +1,11 @@
+@mixin colors($width,$colorrs,$size) {
+    font-size: $width;
+    color: $colorrs;
+    font-weight: $size;
+}
+.one{
+    @include colors(1.8rem, #d7aaf0 , 600)
+}
+.two{
+    @include colors(1.5rem, red , 400)
+}

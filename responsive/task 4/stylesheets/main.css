@@ -1,0 +1,138 @@
+/* line 1, ../sass/main.scss */
+* {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+/* line 6, ../sass/main.scss */
+li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 1rem;
+  padding: .5rem 1rem;
+  background-color: #C3CFE2;
+  border: 3px solid #d7d9d7;
+  border-top-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+/* line 16, ../sass/main.scss */
+.main-pic {
+  width: 100%;
+  height: 50vh;
+  margin-top: 2rem;
+}
+
+/* line 23, ../sass/main.scss */
+.content__items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  margin-top: 4rem;
+}
+/* line 28, ../sass/main.scss */
+.content__items .content_paragrph {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+/* line 31, ../sass/main.scss */
+.content__items .content_paragrph .img1 {
+  width: 120px;
+  height: 120px;
+  margin: 3rem 3rem;
+  padding: 1rem;
+  border: 3px solid black;
+}
+/* line 39, ../sass/main.scss */
+.content__items .content_paragrph p {
+  width: 90%;
+}
+
+/* line 46, ../sass/main.scss */
+footer {
+  text-align: center;
+  background-color: #5E7DAC;
+  width: 70%;
+  margin: auto;
+  margin-top: 3rem;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+/* line 54, ../sass/main.scss */
+footer .footer__content {
+  padding: 0.5rem;
+}
+
+@media (max-width: 1200px) {
+  /* line 61, ../sass/main.scss */
+  .content_paragrph {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(2, 1fr);
+    overflow: hidden;
+  }
+
+  /* line 69, ../sass/main.scss */
+  .par {
+    grid-row: 2/2;
+  }
+
+  /* line 72, ../sass/main.scss */
+  .content_paragrph img {
+    width: 120px;
+    height: 120px;
+    margin: 3rem auto;
+    padding: 1rem;
+    border: 3px solid black;
+    grid-row: 1/2;
+  }
+
+  /* line 80, ../sass/main.scss */
+  .content__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    margin-top: 4rem;
+    overflow: hidden;
+  }
+}
+@media (max-width: 900px) {
+  /* line 90, ../sass/main.scss */
+  .content_paragrph {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    text-align: left;
+    margin-left: 4rem;
+  }
+
+  /* line 98, ../sass/main.scss */
+  .par {
+    grid-row: auto;
+  }
+
+  /* line 101, ../sass/main.scss */
+  .content_paragrph img {
+    width: 120px;
+    height: 120px;
+    margin: 3rem auto;
+    padding: 1rem;
+    border: 3px solid black;
+    grid-row: auto;
+  }
+
+  /* line 109, ../sass/main.scss */
+  .content__items {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+    margin-top: 4rem;
+  }
+
+  /* line 117, ../sass/main.scss */
+  .conten__item {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,12 @@
+footer{
+    text-align: center;
+    background-color: $blue;
+    width:70%;
+    margin: auto;
+    margin-top: 3rem;
+   @extend %borders;
+    border-top-right-radius: 25px;
+    .footer__content{
+        padding: .5rem ;
+    }
+}

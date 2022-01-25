@@ -1,0 +1,10 @@
+li{
+    @extend %borders;
+    list-style: none;
+    display: inline-block;
+    margin-right: 1rem;
+    padding: .5rem 1rem;
+    background-color: $lightblue;
+    border: 3px solid $darkwhite;
+    border-bottom-right-radius: 25px;
+}

@@ -1,0 +1,36 @@
+
+header{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+    padding-top: 0;
+    img{
+    width: 100px;
+    height: 100px;
+    
+    }
+    li{
+    @extend %borders;
+    list-style: none;
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .5rem 1rem;
+    margin-right: 1.5rem;
+    color: $blue;
+    font-size: 1.1rem;
+    // border: 3px solid $darkwhite;
+    // border-bottom-right-radius: 25px;
+    }
+    .icon{
+      display: none;
+    }
+  }
+  @media (max-width:900px){
+    .icon{
+      display: block;
+    }
+    li{
+      display: none;
+    }
+
+  }

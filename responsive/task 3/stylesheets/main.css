@@ -1,0 +1,13 @@
+/* line 6, ../sass/main.scss */
+.one {
+  font-size: 1.8rem;
+  color: #d7aaf0;
+  font-weight: 600;
+}
+
+/* line 9, ../sass/main.scss */
+.two {
+  font-size: 1.5rem;
+  color: red;
+  font-weight: 400;
+}

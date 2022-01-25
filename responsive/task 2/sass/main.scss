@@ -1,0 +1,15 @@
+@mixin border($width, $style, $color,$backColor) {
+    border: $width $style $color;
+    background-color: $backColor;
+  }
+.one{
+    @include border(3px,dashed,black, cyan);
+    
+}
+
+.two{
+    @include border(5px,solid,black,red);   
+}
+.three{
+    @include border(5px,double,black,green);   
+}
