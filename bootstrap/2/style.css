@@ -1,0 +1,240 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.carousel-item img{
+    height: 80vh;
+}
+.product button{
+    background-color: transparent;
+    color: #ffffff;
+    padding: 1rem 1.5rem;
+    border: 1px solid #ffffff;
+    border-radius: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 10rem;
+    margin-top: 2rem;
+}
+.product button:hover{
+    background-color: tomato;
+}
+.content{
+    background-image: url(images/bk.jpeg);
+    background-size: cover;
+    height: auto;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 10rem;
+}
+.content h1{
+    font-size: 3rem;
+}
+.content p{
+    width: 80%;
+    margin: 2rem auto;
+    line-height: 3rem;
+    
+}
+/* .content button{
+    background-color: transparent;
+    color: #ffffff;
+    padding: 1rem 1.5rem;
+    border: 1px solid #ffffff;
+    border-radius: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 10rem;
+    margin-top: 2rem;
+} */
+/* .content button:hover{
+    background-color: tomato;
+} */
+
+
+/* activty */
+.activty{
+    text-align: center;
+    margin-top: 4rem;
+}
+.activty h1{
+    font-size: 3rem;
+    margin-top: 3rem;
+}
+hr{
+    width: 15%;
+    margin: 1rem auto 2rem;
+    color: #c9c9c9;
+    border: .5px solid ;
+    /* border-bottom: none; */
+    opacity: .8;
+    font-size: 5rem;
+}
+.activty img{
+    width: 90%;
+    height: 250px;
+    position: relative;
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+.img-content{
+    position: relative;
+    width: 100%;
+   
+}
+.overlay{
+    position: absolute;
+    /* top: 0; */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 25%;
+    width: 90%;
+    margin: auto;
+    opacity: 0;
+    transition: .3s ease;
+    background-color: tomato;
+}
+.img-content:hover .overlay {
+    opacity: 1;
+  }
+  
+.activty_item{
+    margin-top: 4rem;
+}
+.activty_item p{
+    width: 85%;
+    margin:  1.2rem auto;
+}
+
+.activty_item span i{
+    margin: .5rem;
+    color: #ffffff;
+    font-size: 1rem;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all .2s ease-in-out ;
+}
+.activty_item span i:hover{
+    background-color: #ffffff;
+    color: tomato;
+    transition: all .2s ease-in-out ;
+
+}
+
+/* photosection */
+.photo_content{
+    margin: 12rem auto 0;
+
+}
+.photo_content_item{
+    position: relative;
+    width: 100%;
+    margin: 4rem auto;
+}
+.photo_content_item img{
+    width: 100%;
+    height: 250px;
+    position: relative;
+    display: block;
+    margin: auto;
+    text-align: center;
+    opacity: .3;
+}
+.photo_content_item img:hover{
+    opacity: 1;
+    transition: .5s ease;
+
+}
+.photo_content_item__paragraph{
+margin-top: 1rem;
+    opacity: 0;
+    transition: .5s ease;
+   
+}
+.photo_content_item:hover .photo_content_item__paragraph{
+    opacity: 1;
+  }
+
+
+  /* feature__section */
+  /* .feature__content{
+    display: inline-block;
+      
+  } */
+  /* .social_icon{
+      margin-bottom: 3rem;
+  } */
+  .icons{
+    
+      color: #ffffff;
+      /* background-color: tomato; */
+      
+  }
+  .icons__so{
+      padding:.3rem .7rem;
+      background-color: tomato;
+      float: left;
+      margin-right: 1.4rem;
+      border-radius: 50%;
+  }
+  .feature__header{
+      text-align: center;
+
+  }
+  .feature__header h1{
+      font-size: 3rem;
+  }
+  .feature__items{
+    margin-top: 4rem;
+  }
+.feature__items h2{
+    padding-left: .5rem;
+    color: #011397;
+    font-size: 1.5rem;
+  }
+  .feature__items p{
+    margin-left: 4rem;
+    opacity: .5;
+  }
+  /* .feature__content{
+      margin-left: 1rem;
+  } */
+  .feature__item{
+      margin-bottom: 3rem;
+  }
+
+
+  .form_re{
+      /* text-align: center; */
+  }
+  .form_re h1{
+     margin: 5rem auto;
+     text-align: center;
+  }
+  /* .form__Content{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+  } */
+  .form_re img{
+      width: 100%;
+  }
+  .s-b{
+      margin: 2rem auto;
+  }
+
+  footer{
+      background-color: #011397;
+      color: #ffffff;
+      height: 30vh;
+      font-size: 3rem;
+      text-align: center;
+      
+  }
+
+.pp{
+      padding-top: 4rem !important;
+  }

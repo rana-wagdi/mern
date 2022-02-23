@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>map</title>
+</head>
+<body>
+    <div class="content">
+        <div class="content_items">
+            <div class="buttons">
+              <button type="button" value="GetLocation" onclick="getlocationfun()">Display Map</button>
+              <button value="GetLocation" onclick="getlocationfuns()">Detailed Information</button>
+            </div>
+            <div id="map">
+                <div  id="mymap" >
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyB90FxtYG_ybAYXGkz0ybkmkboE2nEbezI"></script>
+    <script>
+   
+
+
+        mymap = document.getElementById("mymap");
+        map = document.getElementById("map");
+  
+      function getlocationfun() {
+        // check availability
+        mymap.classList.add("mystyle");
+        if (navigator.geolocation) {
+          // 2- get permission
+          navigator.geolocation.getCurrentPosition(getposition, errorhandeler);
+        } else {
+          mymap.innerHTML = "Update Your browser and try Agin !";
+        }
+      }
+      function getposition(position) {
+        // alert("Success");
+        // console.log(arguments[0]);
+        var lat = position.coords.latitude;
+        var lon = position.coords.longitude;
+         var latlon = lat + " , " + lon;
+        mymap.innerHTML = latlon;
+        console.log(lat)
+        console.log(lon)
+       
+        // steps to deal with google maps
+        //1- create object from google maps. latlng ( lat, ,lon )
+        var location = new google.maps.LatLng(lat, lon);
+        //2- center : zoom
+        var specs = { zoom: 17, center: location };
+        //3- display map
+        new google.maps.Map(mymap, specs);
+      }
+      
+      mymap = document.getElementById("mymap");
+  
+      const para = document.createElement("div");
+      const h2 =document.createElement("h2")
+      const p =document.createElement("p")
+      const h3 =document.createElement("h3")
+      const h5 =document.createElement("h5")
+      const hed =document.createElement("h2")
+      const ac =document.createElement("p")
+      const hedt =document.createElement("h2")
+      const h =document.createElement("p")
+
+
+
+  function getlocationfuns() {
+    // check availability
+    mymap.classList.remove("mystyle");
+
+    // mymap.classList.add("map-information");
+    
+    para.classList.add("map-information");
+    document.getElementById("map").appendChild(para);
+    h2.innerHTML = "Latitude(degree)"
+    h3.innerHTML = "Longitude(degree)"
+    hed.innerHTML = "Accuracy(m)"
+    hedt.innerHTML = "TimeStamp(Current Time and Date)"
+
+    para.appendChild(h2);
+   
+    h2.appendChild(p);
+    para.appendChild(h3);
+    para.appendChild(h5);
+    para.appendChild(hed);
+    para.appendChild(ac);
+    para.appendChild(hedt);
+    para.appendChild(h);
+
+
+    if (navigator.geolocation) {
+      // 2- get permission
+      navigator.geolocation.getCurrentPosition(getpositions, errorhandeler);
+    } else {
+      mymap.innerHTML = "Update Your browser and try Agin !";
+    }
+  }
+  function getpositions(position) {
+    // alert("Success");
+    // console.log(arguments[0]);
+    var lat = position.coords.latitude;
+    var lon = position.coords.longitude;
+   var acc= position.coords.accuracy;
+   var acc= position.coords.accuracy;
+
+   var hi=new Date();
+  
+
+     var latlon = lat + " , " + lon+" , "+ Math.floor(acc)+" , ";
+    // mymap.innerHTML = latlon;
+    	
+$( "#mymap" ).remove();
+    p.innerHTML = lat;
+    h5.innerHTML = lon;
+    ac.innerHTML = Math.floor(acc);
+    h.innerHTML = hi;
+
+    console.log(lat)
+    console.log(lon)
+   
+    // steps to deal with google maps
+    //1- create object from google maps. latlng ( lat, ,lon )
+    var location = new google.maps.LatLng(lat, lon);
+    //2- center : zoom
+    var specs = { zoom: 17, center: location };
+    //3- display map
+    // new google.maps.Map(mymap, specs);
+  }
+      function errorhandeler() {
+        alert("Error");
+      }
+    </script>
+</body>
+</html>

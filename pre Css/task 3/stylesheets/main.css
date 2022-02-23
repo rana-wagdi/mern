@@ -22,6 +22,10 @@ header img {
   height: 100px;
 }
 /* line 12, ../sass/layout/_header.scss */
+header ul {
+  transition: all 4s ease 4s;
+}
+/* line 15, ../sass/layout/_header.scss */
 header li {
   list-style: none;
   display: inline-block;
@@ -31,20 +35,56 @@ header li {
   color: #77A3C0;
   font-size: 1.1rem;
 }
-/* line 24, ../sass/layout/_header.scss */
+/* line 27, ../sass/layout/_header.scss */
 header .icon {
   display: none;
 }
 
 @media (max-width: 900px) {
-  /* line 29, ../sass/layout/_header.scss */
-  .icon {
-    display: block;
-  }
-
   /* line 32, ../sass/layout/_header.scss */
-  li {
+  header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+    padding-top: 0;
+    transition: all 2s;
+  }
+  /* line 39, ../sass/layout/_header.scss */
+  header img {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+  }
+  /* line 45, ../sass/layout/_header.scss */
+  header ul {
+    transition: all 4s ease 4s;
+    background-color: #cf2e0e;
+    position: absolute;
+    margin-left: -13rem;
+    transition: height 200ms ease-in;
     display: none;
+  }
+  /* line 56, ../sass/layout/_header.scss */
+  header li {
+    transition: all 4s ease 4s;
+    list-style: none;
+    display: block;
+    margin-top: 1rem;
+    padding: 2rem 6rem;
+    color: #77A3C0;
+    font-size: 1.1rem;
+    cursor: pointer;
+  }
+  /* line 72, ../sass/layout/_header.scss */
+  header .icon {
+    display: block;
+    margin-top: 1.5rem;
+    font-size: 2rem;
+    color: #5a5a5a;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
   }
 }
 /* line 1, ../sass/pages/home.scss */
@@ -52,8 +92,9 @@ header .icon {
   margin: 0rem 4rem;
   text-align: center;
   margin-top: 1rem;
+  position: relative;
 }
-/* line 5, ../sass/pages/home.scss */
+/* line 6, ../sass/pages/home.scss */
 .content h1 {
   font-size: 4rem;
   margin: 5rem auto 2rem;
@@ -65,7 +106,7 @@ button {
   background-color: #77A3C0;
   color: #C3CFE2;
   cursor: pointer;
-  margin-bottom: 4rem;
+  margin: 4rem auto;
 }
 /* line 6, ../sass/components/_button.scss */
 button:hover {

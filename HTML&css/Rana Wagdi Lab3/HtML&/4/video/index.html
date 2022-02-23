@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="jquery-3.5.1.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>task</title>
+</head>
+
+<body>
+    <div class="content">
+        <div class="container">
+            <div class="vedio_content">
+                <div class="button_video">
+                    <p class="ww">Video 1</p>
+                    <p class="source_one">Video 2</p>
+                    <p class="v3">Video 3</p>
+                    <p class="v4">Video 4</p>
+                    <p class="v5">Video 5</p>
+                    <p>Video 6</p>
+                    <p>Video 7</p>
+                    <p>Video 8</p>
+                    <p>Video 9</p>
+                    <p>Video 10</p>
+                    <details>
+                        <summary>SeekBar</summary>
+                        <input
+                          type="range"
+                          min="0"
+                          max="100"
+                          step="any"
+                          value="0"
+                          onchange="changeseekbarfun(event)"
+                        />
+                      </details>
+                      <details>
+                        <summary>PlayBackRate</summary>
+                       
+                        <input type="button" value="-" onclick="decreaseplaybackRate()" />
+                        <input type="button" value="+" onclick="increaseplaybackRate()" />
+                      </details>
+                </div>
+            </div>
+            <div class="vedio_item">
+                <video id="vid" controls >
+                    <source id="source_video" src="media/ww.mp4"  >
+                </video>
+            </div>
+        </div>
+    </div>
+    <script>
+        var video = document.querySelector('video');
+        video.muted = true;
+        video.play()
+
+        document.getElementById('vid').addEventListener('click', function(){
+            video.muted = false
+        })
+        // document.querySelector('p').addEventListener('click',function(){
+        //     document.querySelector('p').classList.add("active");
+        // })
+
+        $('p').on('click', function(){
+            $('p.active').removeClass('active');
+            $(this).addClass('active')
+        })
+
+        document.querySelector('.source_one').addEventListener('click', function() {
+            console.log("clicked")
+   document.querySelector('video').src="media/1.mp4"
+   video.muted = true;
+        video.play()
+
+  });
+  document.querySelector('.ww').addEventListener('click', function() {
+            console.log("clicked")
+   document.querySelector('video').src="media/ww.mp4"
+   video.muted = true;
+        video.play()
+
+  });
+  document.querySelector('.v3').addEventListener('click', function() {
+            console.log("clicked")
+   document.querySelector('video').src="media/ww.mp4"
+   video.muted = true;
+        video.play()
+
+  });
+  document.querySelector('.v4').addEventListener('click', function() {
+            console.log("clicked")
+   document.querySelector('video').src="media/1.mp4"
+
+  });
+  document.querySelector('.v5').addEventListener('click', function() {
+            console.log("clicked")
+   document.querySelector('video').src="media/ww.mp4"
+   video.muted = true;
+        video.play()
+
+  });
+
+  function changeseekbarfun(e) {
+    video.currentTime = (e.target.value * video.duration) / 100;
+      }
+      function increaseplaybackRate() {
+        video.playbackRate++;
+      }
+      function decreaseplaybackRate() {
+        video.playbackRate--;
+        // check
+      }
+//   $("#example_video_1 source").attr("src", "example_video_2.mp4");
+    //  document.getElementById('vid').play();
+    </script>
+</body>
+
+</html>

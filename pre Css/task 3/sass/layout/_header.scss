@@ -9,6 +9,9 @@ header{
     height: 100px;
     
     }
+    ul{
+      transition: all 4s ease 4s;
+    }
     li{
     @extend %borders;
     list-style: none;
@@ -26,11 +29,57 @@ header{
     }
   }
   @media (max-width:900px){
-    .icon{
-      display: block;
-    }
-    li{
+    header{
+      display: flex;
+      justify-content: space-between;
+      margin-top: 0;
+      padding-top: 0;
+     
+      transition: all 2s;
+      img{
+      width: 100px;
+      height: 100px;
+      position: relative;
+      overflow: hidden;
+      }
+      ul{
+        transition: all 4s ease 4s;
+        background-color: $brown;
+    position:absolute;
+      margin-left: -13rem;
+     
+      transition:height 200ms ease-in;
+      // transition: all 5s;
       display: none;
+      // margin-right: 15rem !important;
+      }
+      li{
+        transition: all 4s ease 4s;
+      list-style: none;
+      display: block;
+      margin-top: 1rem;
+      padding: 2rem 6rem;
+     
+      // display: none;
+      color: $blue;
+      font-size: 1.1rem;
+      // transition-timing-function: ease-in-out;
+      cursor:pointer;
+      
+      // border: 3px solid $darkwhite;
+      // border-bottom-right-radius: 25px;
+      }
+      .icon{
+        display: block;
+        margin-top: 1.5rem;
+        font-size: 2rem;
+        color: #5a5a5a;
+        cursor: pointer;
+        position: absolute;
+        z-index: 1;
+        
+     
+      }
     }
 
   }

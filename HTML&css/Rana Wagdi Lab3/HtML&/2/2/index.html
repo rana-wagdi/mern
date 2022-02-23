@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task2 1</title>
+    <style>
+    @keyframes sectionanimation {
+        0% {
+          top: 10px;
+          left: 10px;
+          background-color: red;
+        }
+        25% {
+          top: 10px;
+          left: 400px;
+          background-color: green;
+        }
+        50% {
+          top: 200px;
+          left: 400px;
+          background-color: cyan;
+        }
+        90% {
+          top: 200px;
+          left: 10px;
+          background-color: rgb(255, 166, 0);
+        }
+    }
+    button{
+        margin: 4rem 2rem;
+        padding: 1rem 2rem;
+        background-color: #0783a3;
+        border: 1px solid #006a85;
+        color: #ffffff;
+        
+        cursor: pointer;
+    }
+    button:hover{
+        background-color: aquamarine;
+    }
+    div{
+       
+        width: 100px;
+        margin-top: 8rem;
+        height: 100px;
+        position: absolute;
+        background-color: darkblue;
+        /* animation: sectionanimation;
+        animation-duration: 4s;
+        animation-iteration-count: infinite; */
+        /* background-color: darkblue; */
+     
+        
+    }
+    .square{
+
+        animation: sectionanimation;
+            animation-duration: 4s;
+        animation-iteration-count: infinite;
+    }
+   div:hover{
+    animation-play-state:paused !important;
+    transform: scale(3);
+    /* -webkit-animation: moveSlideshow 10s linear infinite; */
+      
+    }
+    </style>
+</head>
+
+<body>
+   <button id="start">Start</button>
+   <button id="stop">Stop</button>
+   <button id="pause">Pause</button>
+    <div id="a">
+
+    </div>
+    <script>
+        document.getElementById('start').addEventListener('click',startFunctin)
+
+        function startFunctin(){
+            document.getElementsByTagName('div')[0].setAttribute("class", "square");
+            document.getElementsByTagName('div')[0].style.animationPlayState = "running";
+        }
+       
+        document.getElementById('stop').addEventListener('click',stopFunctin)
+
+function stopFunctin(){
+    document.getElementsByTagName('div')[0].removeAttribute("class", "square");
+}
+
+document.getElementById('pause').addEventListener('click',pauseFunctin)
+
+function pauseFunctin(){
+    // document.getElementsByTagName('div')[0].removeAttribute("class", "square");
+    document.getElementsByTagName('div')[0].style.animationPlayState = "paused";
+}
+
+    </script>
+</body>
+</html>

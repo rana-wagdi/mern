@@ -1,0 +1,183 @@
+// container-1{
+// }
+// container-2{
+// }
+// container-3{
+// }
+
+///////different between through and to
+//to el 13 msh m3ana
+//through el 13 m3ana
+
+// @for $i from 1 to 13 {
+//     .col-#{$i}{
+//        width:100/(12/$i)*1%;
+//     }
+// }
+
+
+
+//for every screen name we need to create 12 class
+
+//started with .col-screenname-1...12
+//exception: extra small screens : columns create with out screen name
+
+//xs => col-
+//sm=> col-sm-1.....12
+//md=> col-md-1.....12
+//lg=> col-lg-1.....12
+
+
+// @media screen and (min-width:0){
+//     @for $i from 1 through 12 {
+//     .col-#{$i}{
+//        width:100/(12/$i)*1%;
+//     }
+// }
+// }
+// @media screen and (min-width:768*1px){
+//     @for $i from 1 through 12 {
+//     .col-md-#{$i}{
+//        width:100/(12/$i)*1%;
+//     }
+// }
+// }
+// @media screen and (min-width:1200*1px){
+//     @for $i from 1 through 12 {
+//     .col-lg-#{$i}{
+//        width:100/(12/$i)*1%;
+//     }
+// }
+// }
+
+
+//create grid classes using mixin
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+@mixin  createshowhide($screenname) {
+    @if ($screenname=="") {
+        .hidden-#{$screenname}{
+            display: none !important;
+        }
+        .show{
+            display: block !important;
+        }
+        .order{
+            order: 2;
+        }
+    }@else {
+        .hidden-#{$screenname}{
+            display: none !important;
+        }
+        .show-#{$screenname}{
+            display: block !important;
+        }
+        .order-#{$screenname}{
+            order: 2;
+        }
+    }
+}
+@mixin creategridcolumns($numberodcolumns,$screenname, $screenwidth) {
+     @media screen and(min-width: $screenwidth*1px){
+         /* classes for screen */
+    //     //  @include createoffsetcolumns($numberodcolumns,$screenname, $screenwidth );
+       @include createshowhide($screenname);
+         @if($screenname ==""){
+             //create columns for extra small screens
+             //col-1..12
+             @for $i from 1 through 12 {
+                 .col-#{$i}{
+                     width: 100/($numberodcolumns/$i)*1%;
+                 }
+             }
+             .container{
+                 width: 100%;
+                 margin: 0;
+             }
+         }
+         @else{
+             //create columns for other screens col-screenname
+             @for $i from 1 through 12{
+                 .col-#{$screenname}-#{$i}{
+                     width: 100/($numberodcolumns/$i)*1%;
+                 }
+             }
+             .container{
+                margin: auto ;
+                width: $screenwidth*1px;
+            }
+         }
+     }
+}
+
+
+
+@include creategridcolumns(12,'' ,0 );
+@include creategridcolumns(12, 'sm',576 );
+@include creategridcolumns(12, 'md',768 );
+@include creategridcolumns(12, 'lg',992 );
+@include creategridcolumns(12, 'xl',1200);
+
+
+
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+// .container{
+//     margin: auto ;
+//     width: $screenwidth*1px;
+// }
+.container-fluid{
+    margin: 0;
+    width: 100%;
+}
+
+@mixin createoffsetcolumns($numberodcolumns,$screenname, $screenwidth) {
+    @media screen and(min-width: $screenwidth*1px){
+        /* classes for screen */
+
+     
+        @if($screenname ==""){
+            //create columns for extra small screens
+            //col-1..12
+            @for $i from 1 through 12 {
+                .offset-#{$i}{
+                   margin-left: 100/($numberodcolumns/$i)*1%;
+                }
+            }
+        }
+        @else{
+            //create columns for other screens col-screenname
+            @for $i from 1 through 12{
+                .offset-#{$screenname}-#{$i}{
+                    margin-left: 100/($numberodcolumns/$i)*1%;
+                }
+            }
+            .container{
+               margin: auto ;
+               width: $screenwidth*1px;
+           }
+        }
+    }
+}
+@include createoffsetcolumns(12, "", 0);
+@include createoffsetcolumns(12, "sm", 576);
+@include createoffsetcolumns(12, "md", 768);
+@include createoffsetcolumns(12, "lg", 992);
+@include createoffsetcolumns(12, "xl", 1200);
+
+
+
+// @include createshowhide("");
+// @include createshowhide("sm");
+// @include createshowhide("md");
+// @include createshowhide("lg");
+// @include createshowhide("xl");

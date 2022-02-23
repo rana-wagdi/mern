@@ -27,7 +27,7 @@
                 <img src="images/logo.png"">
             </div>
             <div>
-                <i class="fas fa-bars icon"></i>
+                <i onclick="myFunction() " class="fas fa-bars icon"></i>
             <ul>
                 <li>Home</li>
                 <li>About</li>
@@ -52,5 +52,14 @@
 </body>
 <script>
 
+function myFunction() {
+    var li = document.querySelector('ul');
+  if (li.style.display === "block") {
+      
+    li.style.display = "none";
+  } else {
+    li.style.display = "block";
+  }
+}
 </script>
 </html>

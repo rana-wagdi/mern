@@ -1,0 +1,28 @@
+/* line 6, ../sass/main.scss */
+* {
+  background-color: black;
+}
+
+/* line 9, ../sass/main.scss */
+h1 {
+  color: blue;
+  background-color: white;
+}
+
+/* line 16, ../sass/main.scss */
+#content, footer {
+  border-top: 2px solid blue;
+  border-bottom: 2px solid blue;
+  border-right: 2px solid blue;
+  border-left: 2px solid blue;
+  color: white;
+  width: 80%;
+  margin-bottom: 2rem;
+}
+
+/* line 27, ../sass/main.scss */
+footer {
+  border-bottom: 2px solid green;
+  border-left: 2px solid green;
+  border-right: 2px solid green;
+}
