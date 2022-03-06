@@ -1,0 +1,14 @@
+
+
+<div>
+    <input [(ngModel)]="deptt.image" [disabled]="hidden">
+    <input  [(ngModel)]="deptt.name" [disabled]="hidden">
+    <input [(ngModel)]="deptt.location" [disabled]="hidden">
+    <input [(ngModel)]="deptt.date" [disabled]="hidden">
+    <input [(ngModel)]="deptt.price" [disabled]="hidden">
+    <input [(ngModel)]="deptt.rating" [disabled]="hidden">
+
+    <button class="btn btn-primary" (click)="onClick()" *ngIf="!hidden">Save</button>
+    <button  class="btn btn-danger" *ngIf="hidden" (click)="hidden=!hidden">Edit</button>
+    
+</div>
