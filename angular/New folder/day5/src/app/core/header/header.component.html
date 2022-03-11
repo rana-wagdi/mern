@@ -1,0 +1,14 @@
+
+
+<section>
+
+
+<div>
+    <a [routerLink]="['/home']" routerLinkActive="lactive">home</a>
+    <a [routerLink]="['/contact']">contactUs</a>
+    <a routerLink="/about">about</a>
+    <a [routerLink]="['/speaker']">speaker</a>
+    <a [routerLink]="['/event']">event</a>
+    <span class="lactive" *ngIf="notify.isAdded">getAdd</span>
+</div>
+</section>

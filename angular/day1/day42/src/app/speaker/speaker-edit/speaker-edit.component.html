@@ -1,0 +1,14 @@
+<!-- <p>speaker-edit works!{{sepId}}</p>
+{{seppTemp.name}} {{seppTemp.birthDate}} -->
+<div>
+    <input [(ngModel)]="seppTemp._id" >
+    <input  [(ngModel)]="seppTemp.image" >
+    <input [(ngModel)]="seppTemp.name" >
+    <input [(ngModel)]="seppTemp.address" >
+    <input [(ngModel)]="seppTemp.birthDate" >
+    <input [(ngModel)]="seppTemp.hourRate">
+
+    <!-- <button class="btn btn-primary" (click)="onClick()" *ngIf="!hidden">Save</button>
+    <button  class="btn btn-danger" *ngIf="hidden" (click)="hidden=!hidden">Edit</button> -->
+    <button class="btn btn-primary" (click)="save()" >Edit</button>
+</div>

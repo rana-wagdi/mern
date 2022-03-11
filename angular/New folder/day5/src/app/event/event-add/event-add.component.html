@@ -1,0 +1,11 @@
+<input type="text" [(ngModel)]="eve._id">
+<input type="text" [(ngModel)]="eve.name">
+<input type="text" [(ngModel)]="eve.title">
+<select [(ngModel)]="eve.students">
+    <option [value]="item._id" *ngFor="let item of spes">{{item.fullName}}</option>
+
+</select>
+<input type="file" (input)="onFileChange($event)">
+<button (click)="save()">Save</button>
+<button (click)="show()">Show</button>
+<div></div>

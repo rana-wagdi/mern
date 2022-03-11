@@ -23,7 +23,6 @@ Edept:Department = new Department(0,"",'','',"",0,0);
 
 showdEdit(a:Department){
   this.Edept= new Department(a._id,a.image,a.name,a.location,a.date,a.price,a.rating)
-  
 }
 
 hidden = false;
@@ -47,13 +46,13 @@ deptDetails:Department=this.depts[0];
   }
   depEdit:Department=this.depts[0];
   showEdit(n:number){
-    // this.depEdit=n
+
   
       for (let i = 0; i < this.depts.length; i++) {
         if(this.depts[i]._id==n) 
         {
-         console.log( this.depts.splice(i,1));
-      console.log(this.depts.push(this.Edept))
+       this.depts.splice(i,1)
+      this.depts.push(this.Edept)
           
           return;
         }   

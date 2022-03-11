@@ -1,3 +1,12 @@
 <input type="text" #t1 (keyup)="myfun()">
 <br>
-<app-speaker></app-speaker>
+<app-speaker>
+<h1>Hello</h1>
+</app-speaker>
+<p-password></p-password>
+<p-rating [(ngModel)]="val"></p-rating>
+<!-- <app-chart></app-chart> -->
+<!-- <p-chart type="pie" [data]="data"></p-chart>
+<button type="button" pButton (click)="update($event)"></button> -->
+<p-chart type="line" [data]="data"></p-chart>
+<p-calendar [(ngModel)]="value"></p-calendar>
