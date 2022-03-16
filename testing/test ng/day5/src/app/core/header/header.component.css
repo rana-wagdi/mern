@@ -1,0 +1,26 @@
+*{
+    padding: 0;
+    margin: 0;
+    
+    }
+.lactive{
+border: solid 3px red;
+
+}
+section{
+    background-color: black;
+    color: #ffffff;
+    padding: 1rem;
+    /* float: left; */
+    /* margin: auto; */
+    margin-bottom: 4rem;
+}
+section a{
+
+color: #ffffff;
+text-decoration: none;
+padding: 0 2rem;
+
+
+}
+
