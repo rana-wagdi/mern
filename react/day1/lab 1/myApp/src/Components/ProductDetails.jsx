@@ -9,7 +9,7 @@ let ProductDetails = (props) => {
         };
     return (
     <div>
-      {/* <p>{props.}</p> */}
+      <p>{props.}</p>
     </div>
     )
 

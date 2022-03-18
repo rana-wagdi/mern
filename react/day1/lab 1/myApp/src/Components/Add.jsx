@@ -9,7 +9,6 @@ let Add = (props) => {
     let QuantityRef = React.createRef()
     let save = () => {
 
-    alert("item adde")
         let newproduct = {
             // id: IdRef.current.value,
             Name: NameRef.current.value,
@@ -17,12 +16,8 @@ let Add = (props) => {
             quantity:QuantityRef.current.value
 
             // quantity:QuantityRef.current.value
+
         };
-        
-        
-        
-        
- 
  
     //append table
   

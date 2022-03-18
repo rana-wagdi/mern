@@ -1,19 +1,17 @@
 import React from "react";
 import productData from '../data/ProductData'
-import Add from "./Add";
+import Add from "./Day2/Add";
 
 // import Adding from "./AddStd";
 
 // import Header from './Header'
 let Products = (props) => {
     console.log(props);
-
-    
     let DeletePro = (index, object) => {
-    // alert("item deleted")
         console.log(object);
       productData.splice(index, 1);
     };
+    
 
     let TablRef = React.createRef();
 
@@ -52,6 +50,8 @@ let Products = (props) => {
                                 <td>{pro.price}</td>
                                 <td>{pro.quantity}</td>
                                 <td>
+                                
+                                
                                 
                               <img
                                         src={`images/${pro.productImage}`}
