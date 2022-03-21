@@ -1,6 +1,6 @@
 import React from "react";
 import productData from '../data/ProductData'
-import Add from "./Day2/Add";
+import Add from "./Add";
 
 // import Adding from "./AddStd";
 
