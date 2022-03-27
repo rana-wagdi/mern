@@ -1,0 +1,35 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .section-hero {
+    height: 80vh;
+    background-image: url("../assets/hero.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #ffffff;
+  }
+  .section-hero__contact {
+    padding: 7rem;
+    text-align: left;
+  }
+  .section-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+  }
+  .section-hero p {
+    font-weight: 100;
+    margin-bottom: 5rem;
+    opacity: .8;
+    letter-spacing: .15rem;
+  }
+  .section-hero button{
+      background-color: transparent;
+      color: #ffffff;
+      border: 1px solid #ffffff;
+      padding: 1rem 2rem;
+      cursor: pointer;
+  }

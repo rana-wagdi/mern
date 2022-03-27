@@ -1,0 +1,28 @@
+.aboutMe-section{
+    padding: 8rem;
+    margin: center;
+}
+.aboutMe__items{
+
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+.aboutMe__items h1{
+    font-size: 2.5rem;
+
+}
+.aboutMe__items p{
+    line-height: 2rem;
+    padding-top: 1.2rem;
+    opacity: .7;
+    font-size: 1rem;
+    margin-bottom: 4rem;
+}
+.aboutMe__items a{
+    text-decoration: none;
+    color: #ffffff;
+    background-color: rgb(48, 48, 48);
+    padding: 1rem 2rem;
+    cursor: pointer;
+    word-spacing: .4rem;
+}

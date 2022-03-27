@@ -1,0 +1,38 @@
+.card__items{
+    display: grid;
+    
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 1;
+    margin: 5rem auto;
+
+}
+.card__item{
+   float: left;
+   /* width: 25%; */
+    margin: auto !important;
+   text-align: center;
+   padding: 100px;
+   color: #ffffff;
+   background-color: rgb(121, 116, 116);
+
+}
+.card__item:nth-of-type(2) {
+    background: rgb(54, 54, 54);
+  }.card__itemms{
+    display: grid;
+    
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 1;
+  }
+.card__itemm{
+  background: rgb(54, 54, 54);
+    float: left;
+    color: #ffffff;
+     margin: auto !important;
+    text-align: center;
+    padding: 100px;
+  }
+  .card__itemm:nth-of-type(2) {
+    background-color: rgb(121, 116, 116);
+
+  }
