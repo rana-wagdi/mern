@@ -14,6 +14,10 @@ function Login() {
         email: "",
         password: ""
     })
+    const [userFormERR, setUserFormERR] = useState({
+        emailERR: "",
+        passwordERR: ""
+    })
     
     const handleForm =(event)=>{
         console.log(event.target.id, event.target.value)
@@ -22,17 +26,33 @@ function Login() {
                 ...userForm,
                 email: event.target.value,
             }) 
+            setUserFormERR({
+                    ...userFormERR,
+                    emailERR: event.target.value.length === 0 ?"This feild is required":null
+                    
+            })
     } else if(event.target.id ==='password'){
         setUserForm({
             ...userForm,
             password: event.target.value,
         }) 
+        setUserFormERR({
+            ...userFormERR,
+            passwordERR: event.target.value.length <8 ?"This feild should be more than 8 charchters":null
+            
+    })
 } 
 
     }
     const handleSubmitForm = (e) => {
         e.preventDefault()
-        console.log(handleSubmitForm)
+        if (
+            !userFormERR.emailERR &&
+            !userFormERR.passwordERR
+            
+          ) {
+            console.log(userForm);
+          }
     }
     return (
         <form onSubmit={handleSubmitForm}>
@@ -42,13 +62,15 @@ function Login() {
                 </label>
                 <input
                     type="email"
-
+                    className={` ${
+            userFormERR.emailERR ? "border-danger" : ""
+          }`}
                     id="email"
                     aria-describedby="usernameHelp"
                     onChange={handleForm}
                 />
                 <div id="usernameHelp" className="form-text text-danger">
-
+                        {userFormERR.emailERR}
                 </div>
             </div>
             <div className="mb-3">
@@ -57,15 +79,17 @@ function Login() {
                 </label>
 
                     
-                <input type={passwordShown ? "text" : "password"} id="password" onChange={handleForm}  />
+                <input type={passwordShown ? "text" : "password"} id="password" onChange={handleForm} className={`${
+            userFormERR.passwordERR ? "border-danger" : ""
+          }`} />
                 <button onClick={togglePassword}>Show Password</button>
                 <div id="ageHelp" className="form-text text-danger">
-
+                    {userFormERR.passwordERR}
                 </div>
             </div>
 
             <button type="submit" className="btn btn-primary">
-                Submit
+               Login
             </button>
         </form>
     )

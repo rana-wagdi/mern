@@ -4,30 +4,49 @@ import React, { useEffect, useState } from "react";
 
 function AddUser() {
 
-    const [userForm, setUserForm]=useState({
-        username:"Rana",
-        age:""
+    const [userForm, setUserForm] = useState({
+        username: "Rana",
+        age: ""
     })
-    
-    const handleFormChange = (event) =>{
+    const [userFormERR, setUserFormERR] = useState({
+        usernameERR: null,
+        ageERR: null
+    })
+
+
+    const handleFormChange = (event) => {
         console.log(event.target.id, event.target.value)
-        if(event.target.id ==='username'){
+        if (event.target.id === 'username') {
             setUserForm({
                 ...userForm,
                 username: event.target.value,
             })
-        }else if(event.target.id ==='age'){
+            setUserFormERR({
+                ...userFormERR,
+                usernameERR: event.target.value.length === 0 ? 'This feild is required' : event.target.value.length < 3 ? "Min.length is 3 characters" :null
+            })
+        } else if (event.target.id === 'age') {
             setUserForm({
                 ...userForm,
                 age: event.target.value,
             })
+            setUserFormERR({
+                ...userFormERR,
+                ageERR: event.target.value.length === 0 ? 'This feild is required' : event.target.value< 25 ? "Min age is 25 " : null
+            })
         }
     }
-    
-    const handleSubmitForm =(e)=>{
-        
+
+    const handleSubmitForm = (e) => {
+
         e.preventDefault()
-        console.log(userForm)
+        if (
+            !userFormERR.usernameERR &&
+            !userFormERR.ageERR 
+            
+          ) {
+            console.log(userForm);
+          }
     }
     return (
         <form onSubmit={handleSubmitForm} >
@@ -37,14 +56,14 @@ function AddUser() {
                 </label>
                 <input
                     type="text"
-
                     id="username"
                     aria-describedby="usernameHelp"
+                    className={`form-control ${userFormERR.usernameERR ? "border-danger" : "" }`}
                     value={userForm.username}
                     onChange={handleFormChange}
                 />
                 <div id="usernameHelp" className="form-text text-danger">
-
+                    {userFormERR.usernameERR}
                 </div>
             </div>
             <div className="mb-3">
@@ -60,12 +79,12 @@ function AddUser() {
                     onChange={handleFormChange}
                 />
                 <div id="ageHelp" className="form-text text-danger">
-
+                    {userFormERR.ageERR}
                 </div>
             </div>
 
             <button type="submit" className="btn btn-primary">
-                Submit
+                Login
             </button>
         </form>
     )
